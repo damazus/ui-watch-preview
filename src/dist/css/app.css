@@ -165,7 +165,6 @@ button:active {
       font-size: 52px; } }
 
 .card__description {
-  font-size: 15px;
   color: #f68e9c;
   line-height: 16px;
   margin-bottom: 20px; }
@@ -191,9 +190,9 @@ button:active {
 .card-basket {
   display: flex;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  height: 46px;
   transition: transform .25s; }
   .card-basket:hover {
-    transform: translateY(-1px);
     box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.1); }
 
 .card-basket-counter {
@@ -201,33 +200,38 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 48px;
-  height: 40px;
+  padding: 0 4px;
   background: #e01223; }
 
 .card-basket-counter__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
-  font-weight: bold;
+  width: 25px;
   color: #FFF;
-  padding-left: 4px; }
+  margin-left: px; }
 
 .card-basket-counter__btns {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 80%; }
+  justify-content: space-between;
+  height: 90%; }
 
 .card-basket-counter__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   font-size: 6px;
   color: #FFF;
   background: none;
   border: none;
+  border-radius: 2px;
   box-shadow: none; }
+  .card-basket-counter__btn:hover {
+    background: #9e000d; }
 
 .card-basket__btn {
   font-family: "GTWalsheim Bold";
@@ -294,8 +298,9 @@ button:active {
       margin-right: inherit;
       margin-bottom: 0; } }
 
-.watch-details {
-  margin-left: 20px; }
+@media only screen and (min-width: 1024px) {
+  .watch-details {
+    margin-left: 20px; } }
 
 .watch-details-item {
   display: flex;
@@ -359,6 +364,8 @@ button:active {
       transform: translateX(-50%) translateY(-50%); } }
 
 .card__navigation {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -414,7 +421,7 @@ button:active {
   margin: 0 10px; }
 
 .card-nav__btn {
-  background: none;
+  background: #FFF;
   width: 40px;
   height: 40px;
   border: 1px solid #d8d8d8;

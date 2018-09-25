@@ -5,10 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     basket_counter_up.addEventListener("click", function () {
         let current = parseInt(counter.innerText) + 1;
-
-        setTimeout(function () {
-            counter.innerHTML = current;
-        }, 150);
+        counter.innerHTML = current;
     });
 
     basket_counter_down.addEventListener("click", function () {

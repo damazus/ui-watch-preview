@@ -77,8 +77,6 @@ class Slider{
     }
 
     slide(){
-        this.toggleNavControls();
-
         let translate = -1 * this.current * 100 / this.itemsCount
 
         this.$list.css({

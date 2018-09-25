@@ -354,8 +354,7 @@ button:focus {
   height: 140px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15px;
-  opacity: 0; }
+  margin-bottom: 15px; }
   @media only screen and (min-width: 768px) {
     .watch__picture {
       margin-left: inherit;
@@ -391,7 +390,7 @@ button:focus {
 .card-right {
   position: relative;
   background: #FFF;
-  overflow-x: hidden; }
+  overflow: hidden; }
   @media only screen and (min-width: 1024px) {
     .card-right {
       width: 55%;
@@ -406,7 +405,7 @@ button:focus {
   right: auto;
   transform: translateX(-50%) translateY(-50%);
   text-transform: uppercase;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: bold;
   color: #f0f0f0;
   opacity: 1; }
@@ -431,9 +430,12 @@ button:focus {
       right: auto;
       transform: translateX(-50%) translateY(-50%); } }
 
-@media only screen and (min-width: 1024px) {
-  .slide__picture {
-    width: 282px; } }
+.slide__picture {
+  width: 250px;
+  height: auto; }
+  @media only screen and (min-width: 1024px) {
+    .slide__picture {
+      width: 282px; } }
 
 .card__title {
   animation: slide-in 1s forwards cubic-bezier(0, 0.69, 0.19, 1); }
@@ -447,9 +449,11 @@ button:focus {
 .tab {
   animation: slide-out 1s forwards 0.8s cubic-bezier(0, 0.69, 0.19, 1); }
 
-@media only screen and (min-width: 768px) {
-  .watch__picture {
-    animation: slide-left 0.3s forwards 1.2s cubic-bezier(0, 0.1, 0.99, 1); } }
+.watch__picture {
+  animation: slide-in 0.4s forwards 1.2s cubic-bezier(0, 0.1, 0.99, 1); }
+  @media only screen and (min-width: 768px) {
+    .watch__picture {
+      animation: slide-left 0.3s forwards 1.2s cubic-bezier(0, 0.1, 0.99, 1); } }
 
 .watch-details-item:nth-child(1) {
   animation: slide-right 0.3s forwards 0.8s cubic-bezier(0, 0.12, 0.6, 1); }

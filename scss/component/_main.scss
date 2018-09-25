@@ -263,7 +263,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-  opacity: 0;
 
   @include MQ(M){
     margin-left: inherit;
@@ -310,7 +309,7 @@
 .card-right{
   position: relative;
   background: #FFF;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @include MQ(L){
     width: 55%;
@@ -323,7 +322,7 @@
   position: absolute;
   @include center;
   text-transform: uppercase;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: bold;
   color: #f0f0f0;
   opacity: 1;
@@ -350,6 +349,9 @@
 }
 
 .slide__picture{
+  width: 250px;
+  height: auto;
+
   @include MQ(L){
     width: 282px;
   }
@@ -375,10 +377,10 @@
 }
 
 .watch__picture{
-
+  animation: slide-in .4s forwards 1.2s cubic-bezier(0, 0.1, 0.99, 1);
 
   @include MQ(M){
-    animation: slide-left .300s forwards 1.2s cubic-bezier(0, 0.1, 0.99, 1);
+    animation: slide-left .3s forwards 1.2s cubic-bezier(0, 0.1, 0.99, 1);
   }
 }
 

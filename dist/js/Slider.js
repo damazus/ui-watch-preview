@@ -40,7 +40,10 @@ class Slider{
             width: 100 * this.itemsCount + '%',
             transition: 'transform ' + this.options.speed + 'ms ' + this.options.easing
         });
-        this.$items.css({width: 100 / this.itemsCount + '%', padding: '0 1px'})
+        this.$items.css({
+            width: 100 / this.itemsCount + '%',
+            padding: '0 1px',
+        })
     }
 
     initEvents(){

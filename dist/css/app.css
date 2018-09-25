@@ -127,19 +127,13 @@ button:focus {
     opacity: 1;
     transform: translateX(0); } }
 
-@keyframes bounce {
-  0% {
-    opacity: 0;
-    transform: translateY(-6px); }
-  25% {
+@keyframes scale-in {
+  0%, 18% {
     opacity: 1;
-    transform: translateY(6px); }
-  50% {
-    opacity: 1;
-    transform: translateY(-4px); }
+    transform: scale(0); }
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    transform: scale(1); } }
 
 @keyframes fade-in {
   from {
@@ -196,12 +190,12 @@ button:focus {
 
 .card-left-top {
   position: relative;
-  padding: 60px 45px;
+  padding: 55px 45px 50px;
   background: linear-gradient(to bottom, #f70b33, #e01223);
   box-shadow: 0px 5px 5px rgba(158, 0, 13, 0.2); }
   @media only screen and (min-width: 1024px) {
     .card-left-top {
-      border-top-left-radius: 8px; } }
+      border-top-left-radius: 12px; } }
 
 .card__title {
   font-family: "cocogoose";
@@ -237,7 +231,7 @@ button:focus {
   background: #9e000d; }
   @media only screen and (min-width: 1024px) {
     .card-left-bottom {
-      border-bottom-left-radius: 8px; } }
+      border-bottom-left-radius: 12px; } }
 
 .card-basket {
   display: flex;
@@ -335,6 +329,16 @@ button:focus {
   .tab-nav-link:hover {
     color: #FFF; }
 
+.tab {
+  overflow: hidden; }
+
+.tab-content {
+  display: flex;
+  width: 400%; }
+
+.tab-item {
+  width: 25%; }
+
 .tab-item.tab-item--blokk {
   font-family: "blokk";
   color: #f68e9c; }
@@ -391,8 +395,8 @@ button:focus {
   @media only screen and (min-width: 1024px) {
     .card-right {
       width: 55%;
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px; } }
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px; } }
 
 .card__placeholder {
   position: absolute;
@@ -464,3 +468,6 @@ button:focus {
 
 .card-basket {
   animation: fade-in .300s forwards 1s ease-in; }
+
+.slide__picture {
+  animation: scale-in 1.5s forwards cubic-bezier(0.39, 0.58, 0.57, 1); }

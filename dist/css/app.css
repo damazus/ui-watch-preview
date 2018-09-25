@@ -51,12 +51,20 @@ table {
   box-sizing: border-box; }
 
 @font-face {
+  font-family: 'cocogoose';
+  src: url(../fonts/cocogoose/cocogoose.woff2); }
+
+@font-face {
   font-family: 'GTWalsheim';
   src: url(../fonts/GTWalsheim/GT-Walsheim-Pro-Medium.woff); }
 
 @font-face {
   font-family: 'GTWalsheim Bold';
   src: url(../fonts/GTWalsheim/GT-Walsheim-Pro-Bold.woff); }
+
+@font-face {
+  font-family: 'blokk';
+  src: url(../fonts/BLOKKNeue-Regular.ttf); }
 
 body {
   font-family: 'GTWalsheim', sans-serif;
@@ -89,6 +97,64 @@ button:active {
 .img-fluid {
   max-width: 100%;
   height: auto; }
+
+@keyframes slide-in {
+  0%, 18% {
+    opacity: 0;
+    transform: translateY(60px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes slide-out {
+  0%, 18% {
+    opacity: 0;
+    transform: translateY(-60px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes slide-right {
+  0%, 18% {
+    opacity: 0;
+    transform: translateX(-30px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes slide-left {
+  0%, 18% {
+    opacity: 0;
+    transform: translateX(30px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px); }
+  25% {
+    opacity: 1;
+    transform: translateY(6px); }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.hidden {
+  opacity: 0; }
+
+.img-fluid {
+  max-width: 100%; }
 
 @media only screen and (min-width: 1024px) {
   .main {
@@ -154,6 +220,7 @@ button:active {
   background: none; }
 
 .card__title {
+  font-family: "cocogoose";
   text-transform: uppercase;
   font-size: 40px;
   font-weight: bold;
@@ -166,10 +233,11 @@ button:active {
 
 .card__description {
   color: #f68e9c;
-  line-height: 16px;
+  line-height: 19px;
   margin-bottom: 20px; }
 
 .card__price {
+  font-family: "cocogoose";
   font-size: 25px;
   margin-bottom: 30px;
   color: #FFF; }
@@ -210,7 +278,7 @@ button:active {
   font-size: 16px;
   width: 25px;
   color: #FFF;
-  margin-left: px; }
+  margin-left: 4px; }
 
 .card-basket-counter__btns {
   display: flex;
@@ -251,7 +319,7 @@ button:active {
 .tab-nav__item {
   position: relative;
   display: block;
-  width: 100%;
+  width: 25%;
   padding-bottom: 8px; }
   .tab-nav__item:before {
     content: "";
@@ -275,37 +343,44 @@ button:active {
 
 .tab-nav-link {
   position: relative;
+  font-weight: bold;
   text-transform: uppercase;
   color: #a8000d; }
   .tab-nav-link:hover {
     color: #FFF; }
 
+.tab-item.tab-item--blokk {
+  font-family: "blokk";
+  color: #f68e9c; }
+
 @media only screen and (min-width: 768px) {
   .watch {
     display: flex;
     align-items: center;
-    margin-top: 30px; } }
+    margin-top: 10px; } }
 
 .watch__picture {
   display: block;
   height: 140px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  opacity: 0; }
   @media only screen and (min-width: 768px) {
     .watch__picture {
       margin-left: inherit;
       margin-right: inherit;
       margin-bottom: 0; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .watch-details {
     margin-left: 20px; } }
 
 .watch-details-item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  opacity: 0; }
 
 .watch-details-item__label {
   position: relative;
@@ -344,7 +419,10 @@ button:active {
   font-size: 70px;
   font-weight: bold;
   color: #f0f0f0;
-  opacity: .8; }
+  opacity: 1; }
+  @media only screen and (min-width: 768px) {
+    .card__placeholder {
+      font-size: 140px; } }
   @media only screen and (min-width: 1024px) {
     .card__placeholder {
       font-size: 115px; } }
@@ -352,8 +430,8 @@ button:active {
 .slide {
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: center; }
+  text-align: center;
+  margin-top: 22px; }
   @media only screen and (min-width: 1024px) {
     .slide {
       position: absolute;
@@ -362,6 +440,10 @@ button:active {
       bottom: auto;
       right: auto;
       transform: translateX(-50%) translateY(-50%); } }
+
+@media only screen and (min-width: 1024px) {
+  .slide__picture {
+    width: 300px; } }
 
 .card__navigation {
   position: relative;
@@ -429,3 +511,37 @@ button:active {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
   .card-nav__btn:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+
+.card__title {
+  animation: slide-in 1s forwards cubic-bezier(0, 0.69, 0.19, 1); }
+
+.card__description {
+  animation: slide-in 0.7s forwards 0.4s cubic-bezier(0, 0.69, 0.19, 1); }
+
+.card__price {
+  animation: slide-in 1.2s forwards 1.4s cubic-bezier(0, 0.69, 0.19, 1); }
+
+.tab {
+  animation: slide-out 1s forwards 0.8s cubic-bezier(0, 0.69, 0.19, 1); }
+
+@media only screen and (min-width: 768px) {
+  .watch__picture {
+    animation: slide-left 0.3s forwards 1.2s cubic-bezier(0, 0.1, 0.99, 1); } }
+
+.watch-details-item:nth-child(1) {
+  animation: slide-right 0.3s forwards 0.8s cubic-bezier(0, 0.12, 0.6, 1); }
+
+.watch-details-item:nth-child(2) {
+  animation: slide-right 0.28s forwards 0.95s cubic-bezier(0, 0.12, 0.6, 1); }
+
+.watch-details-item:nth-child(3) {
+  animation: slide-right 0.26s forwards 1.15s cubic-bezier(0, 0.12, 0.6, 1); }
+
+.watch-details-item:nth-child(4) {
+  animation: slide-right 0.24s forwards 1.25s cubic-bezier(0, 0.12, 0.6, 1); }
+
+.watch-details-item:nth-child(5) {
+  animation: slide-right 0.22s forwards 1.35s cubic-bezier(0, 0.12, 0.6, 1); }
+
+.card-basket {
+  animation: fade-in .3s; }

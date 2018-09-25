@@ -15,20 +15,22 @@
         <div class="card-left">
             <div class="card-left-top">
                 <button class="card__btn"><i class="ion ion-close"></i></button>
-                <h3 class="card__title">santiago</h3>
-                <p class="card__description">Lorem ipsum dolor sit amet, consectetur t amet, consectetur adipisicing elit. Accusamus</p>
-                <div class="card__price">$65,00</div>
-                <div class="tab">
+                <h3 class="card__title hidden">santiago</h3>
+                <p class="card__description hidden">Red resin case with a red rubber strap and
+                    fixed bezel. Red dial with red hands. Minute
+                    markers around the outer rim.</p>
+                <div class="card__price hidden">$65,00</div>
+                <div class="tab hidden" id="slider">
                     <ul class="tab-nav">
-                        <li class="tab-nav__item is-active"><a href="#0" class="tab-nav-link">case</a></li>
-                        <li class="tab-nav__item"><a href="#0" class="tab-nav-link">brand</a></li>
-                        <li class="tab-nav__item"><a href="#0" class="tab-nav-link">dial</a></li>
-                        <li class="tab-nav__item"><a href="#0" class="tab-nav-link">other</a></li>
+                        <li class="tab-nav__item is-active" data-slide-dot><a href="#0" class="tab-nav-link">case</a></li>
+                        <li class="tab-nav__item" data-slide-dot><a href="#0" class="tab-nav-link">brand</a></li>
+                        <li class="tab-nav__item" data-slide-dot><a href="#0" class="tab-nav-link">dial</a></li>
+                        <li class="tab-nav__item" data-slide-dot><a href="#0" class="tab-nav-link">other</a></li>
                     </ul>
-                    <div class="tab-content">
-                        <div class="tab-item">
+                    <div class="tab-content" data-slide-items>
+                        <div class="tab-item" data-slide-item>
                             <div class="watch">
-                                <img src="dist/img/apple-watch.png" class="watch__picture" alt="..."/>
+                                <img src="dist/img/Untitled-1dfsdfdsfds.png" class="watch__picture" alt="..."/>
                                 <ul class="watch-details">
                                     <li class="watch-details-item">
                                         <span class="watch-details-item__label">Size</span>
@@ -53,6 +55,27 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="tab-item tab-item--blokk" data-slide-item>
+                            <div class="watch">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores beatae culpa doloremque
+                                et ex facilis illum iusto laborum, maxime molestiae, odit praesentium, quam quasi reiciendis
+                                repellat veritatis vero voluptatum!
+                            </div>
+                        </div>
+                        <div class="tab-item tab-item--blokk" data-slide-item>
+                            <div class="watch">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores beatae culpa doloremque
+                                et ex facilis illum iusto laborum, maxime molestiae, odit praesentium, quam quasi reiciendis
+                                repellat veritatis vero voluptatum!
+                            </div>
+                        </div>
+                        <div class="tab-item tab-item--blokk" data-slide-item>
+                            <div class="watch">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores beatae culpa doloremque
+                                et ex facilis illum iusto laborum, maxime molestiae, odit praesentium, quam quasi reiciendis
+                                repellat veritatis vero voluptatum!
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,7 +95,7 @@
         <div class="card-right">
             <div class="card__placeholder">santiago</div>
             <div class="slide">
-                <img src="dist/img/watch_red.jpg" alt="..."/>
+                <img src="dist/img/new.png" class="img-fluid slide__picture" alt="..."/>
             </div>
             <div class="card__navigation">
                 <ul class="card-dots">
@@ -95,6 +118,7 @@
 </div>
 
 <script src="dist/plugins/jQuery-2.1.4.min.js"></script>
+<script src="dist/js/Slider.js"></script>
 <script src="dist/js/app.js"></script>
 </body>
 </html>

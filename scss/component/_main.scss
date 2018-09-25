@@ -1,3 +1,11 @@
+.hidden{
+  opacity: 0;
+}
+
+.img-fluid{
+  max-width: 100%;
+}
+
 .main {
   @include MQ(L){
     position: fixed;
@@ -75,6 +83,7 @@
 }
 
 .card__title{
+  font-family: "cocogoose";
   text-transform: uppercase;
   font-size: 40px;
   font-weight: bold;
@@ -89,11 +98,12 @@
 
 .card__description{
   color: #f68e9c;
-  line-height: 16px;
+  line-height: 19px;
   margin-bottom: 20px;
 }
 
 .card__price{
+  font-family: "cocogoose";
   font-size: 25px;
   margin-bottom: 30px;
   color: #FFF;
@@ -187,13 +197,12 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 6px;
-  //border-bottom: 1px solid #b60413;
 }
 
 .tab-nav__item{
   position: relative;
   display: block;
-  width: 100%;
+  width: 25%;
   padding-bottom: 8px;
 
   &:before{
@@ -224,6 +233,7 @@
 
 .tab-nav-link{
   position: relative;
+  font-weight: bold;
   text-transform: uppercase;
   color: #a8000d;
 
@@ -232,12 +242,17 @@
   }
 }
 
+.tab-item.tab-item--blokk{
+  font-family: "blokk";
+  color: #f68e9c;
+}
+
 // watch item
 .watch{
   @include MQ(M){
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
   }
 }
 
@@ -247,6 +262,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+  opacity: 0;
 
   @include MQ(M){
     margin-left: inherit;
@@ -256,7 +272,7 @@
 }
 
 .watch-details{
-  @include MQ(L){
+  @include MQ(M){
     margin-left: 20px;
   }
 }
@@ -265,6 +281,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  opacity: 0;
 }
 
 .watch-details-item__label{
@@ -308,7 +325,11 @@
   font-size: 70px;
   font-weight: bold;
   color: #f0f0f0;
-  opacity: .8;
+  opacity: 1;
+
+  @include MQ(M){
+    font-size: 140px;
+  }
 
   @include MQ(L){
     font-size: 115px;
@@ -318,12 +339,18 @@
 .slide{
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin-top: 22px;
 
   @include MQ(L){
     position: absolute;
     @include center;
+  }
+}
+
+.slide__picture{
+  @include MQ(L){
+    width: 300px;
   }
 }
 
@@ -406,3 +433,59 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
 }
+
+
+// element to animate
+
+.card__title{
+  animation: slide-in 1s forwards cubic-bezier(0, 0.69, 0.19, 1);
+}
+
+.card__description{
+  animation: slide-in .7s forwards .4s cubic-bezier(0, 0.69, 0.19, 1);
+}
+
+.card__price{
+  animation: slide-in 1.2s forwards 1.4s cubic-bezier(0, 0.69, 0.19, 1);
+}
+
+.tab{
+  animation: slide-out 1s forwards .8s cubic-bezier(0, 0.69, 0.19, 1);
+}
+
+.watch__picture{
+
+
+  @include MQ(M){
+    animation: slide-left .300s forwards 1.2s cubic-bezier(0, 0.1, 0.99, 1);
+  }
+}
+
+.watch-details-item{
+  &:nth-child(1){
+    animation: slide-right .300s forwards .8s cubic-bezier(0, 0.12, 0.60, 1);
+  }
+
+  &:nth-child(2){
+    animation: slide-right .280s forwards .95s cubic-bezier(0, 0.12, 0.60, 1);
+  }
+
+  &:nth-child(3){
+    animation: slide-right .260s forwards 1.15s cubic-bezier(0, 0.12, 0.60, 1);
+  }
+
+  &:nth-child(4){
+    animation: slide-right .240s forwards 1.25s cubic-bezier(0, 0.12, 0.60, 1);
+  }
+
+  &:nth-child(5){
+    animation: slide-right .220s forwards 1.35s cubic-bezier(0, 0.12, 0.60, 1);
+  }
+}
+
+.card-basket{
+  opacity: 0;
+  animation: slide-right .1s forwards 1.35s cubic-bezier(0, 0.12, 0.60, 1);
+}
+
+// end of element to animate

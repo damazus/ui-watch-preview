@@ -1,6 +1,7 @@
 # ui-watch-preview
 
-Addidas watch product ui card 
+Addidas watch product ui card  
+Live preview: https://damazus.github.io/ui-watch-preview/#0
 
 ![Demo Animation](../assets/screenshot.png?raw=true)
 

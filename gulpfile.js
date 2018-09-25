@@ -10,15 +10,15 @@ gulp.task('serve', function() {
         }
     });
 
-    gulp.watch("./scss/**/*.scss", ['sass']);
-    gulp.watch("./*.html").on('change', browserSync.reload);
-    gulp.watch("./dist/js/*.js").on('change', browserSync.reload);
+    gulp.watch("scss/**/*.scss", ['sass']);
+    gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch("dist/js/*.js").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function(){
-    return gulp.src(".//scss/**/*.scss")
+    return gulp.src("scss/**/*.scss")
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest("./dist/css"))
+        .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
 });
 

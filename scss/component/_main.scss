@@ -350,7 +350,7 @@
 
 .slide__picture{
   @include MQ(L){
-    width: 300px;
+    width: 282px;
   }
 }
 
@@ -484,8 +484,7 @@
 }
 
 .card-basket{
-  opacity: 0;
-  animation: slide-right .1s forwards 1.35s cubic-bezier(0, 0.12, 0.60, 1);
+  animation: fade-in .300s forwards 1.3s ease-in;
 }
 
 // end of element to animate

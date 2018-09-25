@@ -41,8 +41,6 @@ class Slider{
             transition: 'transform ' + this.options.speed + 'ms ' + this.options.easing
         });
         this.$items.css({width: 100 / this.itemsCount + '%', padding: '0 1px'})
-
-        // generate navigation
     }
 
     initEvents(){
@@ -92,10 +90,6 @@ class Slider{
         })
     }
 
-    toggleNavControls(){
-
-    }
-
     jump(position) {
         if (position === this.current || this.isAnimating) return false
 
@@ -116,8 +110,3 @@ class Slider{
     }
 
 }
-
-const slider = new Slider("#slider", {
-    speed: 400,
-    ease: "cubic-bezier(0, 0.69, 0.19, 1)"
-});

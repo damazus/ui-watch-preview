@@ -2,7 +2,7 @@
 
 Addidas watch product ui card 
 
-![Demo Animation](../assets/screenshot.jpg?raw=true)
+![Demo Animation](../assets/screenshot.png?raw=true)
 
 ## Getting Started
 

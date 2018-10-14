@@ -1,6 +1,6 @@
 # ui-watch-preview
 
-Addidas watch product ui card  
+Addidas watch product card ui  
 
 ![Screenshot](../assets/screenshot.png?raw=true)
 

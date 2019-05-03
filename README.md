@@ -4,7 +4,7 @@ Addidas watch product card ui
 
 ![Screenshot](../assets/screenshot.png?raw=true)
 
-## Getting Started
+### Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine
  for development and testing purposes.
@@ -31,7 +31,7 @@ $ npm install
 $ gulp
 ```
 
-## Built With
+### Built With
 
 * HTML5
 * CSS3
